@@ -1,0 +1,44 @@
+@import "mixins";
+
+.stage{
+  @extend box;
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background: #fafafa;
+  .s-buttonSet{
+    @extend box;
+    width: 100%;
+    padding: 20px;
+    .sb-button:hover{
+      cursor: pointer;
+    }
+    .sb-button{
+      @extend box;
+      padding: 0 20px;
+      height: 40px;
+      margin: 10px;
+      line-height: 40px;
+      border: 1px solid $theme;
+      font-family: gotham-l;
+      text-align: center;
+    }
+    .sb-button.active{
+      background: $theme;
+      color: #fff;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .stage{
+    .s-buttonSet{
+      .sb-button {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  }
+}
