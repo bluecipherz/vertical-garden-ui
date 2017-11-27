@@ -72,12 +72,8 @@ class App extends Component {
                     break;
 
                 case 'PH':
-
-                    let avgValue=msg.value;
-                    let pHVol= avgValue*5.0/1024/6;
-                    let phValue = (-5.70 * pHVol) + 21.34;
-
-                    this.setState({phLevel:msg.value});
+                    let avgValue= parseFloat((1024-msg.value) / 1024 * 14).toFixed(2);
+                    this.setState({phLevel:msg.value, phCalculated:avgValue});
                     break;
 
                 default:
@@ -116,7 +112,7 @@ class App extends Component {
                                 <div className="sb-button" onClick={()=>this.emit('c')}>Turn On Light</div>
                             ) : null
                         }
-                        <div className="sb-button ">PH : {this.state.phLevel}</div>
+                        <div className="sb-button ">PH : {this.state.phCalculated} <span>({this.state.phLevel})</span></div>
                         <div className={"sb-button " + (this.state.refreshing ? 'active' : '')} onClick={()=>this.requestStatus()}>
                             {this.state.refreshing ? 'Refreshing...' : 'Refresh'}
                         </div>

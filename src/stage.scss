@@ -24,6 +24,11 @@
       border: 1px solid $theme;
       font-family: gotham-l;
       text-align: center;
+      span{
+        opacity: 0.5;
+        padding: 0 5px;
+        font-size: 12px;
+      }
     }
     .sb-button.active{
       background: $theme;

@@ -408,6 +408,10 @@ whiteGrad2 {
       border: 1px solid #bf3d27;
       font-family: gotham-l;
       text-align: center; }
+      .stage .s-buttonSet .sb-button span {
+        opacity: 0.5;
+        padding: 0 5px;
+        font-size: 12px; }
     .stage .s-buttonSet .sb-button.active {
       background: #bf3d27;
       color: #fff; }
