@@ -21,6 +21,7 @@ class App extends Component {
         };
 
         this.processMessage = msg => {
+            console.log(msg);
             if(msg.type === 'MESSAGE_FROM_AR') {
                 let data = msg.data;
                 let parsingFailed = false;
