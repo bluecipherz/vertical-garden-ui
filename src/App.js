@@ -90,7 +90,7 @@ class App extends Component {
     componentDidMount() {
         this.requestStatus();
         this.requestStatus();
-        setInterval(this.requestStatus, 10000);
+        // setInterval(this.requestStatus, 10000);
     }
 
     render() {
